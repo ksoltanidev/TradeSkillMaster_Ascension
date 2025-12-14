@@ -12,284 +12,284 @@ local L = LibStub("AceLocale-3.0"):GetLocale("TradeSkillMaster") -- loads the lo
 
 local conversions = {
 	-- Epic WotLK gems
-	["item:36919:0:0:0:0:0:0"] = { -- Cardinal Ruby
-		["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:36922:0:0:0:0:0:0"] = { -- King's Amber
-		["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:36925:0:0:0:0:0:0"] = { -- Majestic Zircon
-		["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:36928:0:0:0:0:0:0"] = { -- Dreadstone
-		["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:36931:0:0:0:0:0:0"] = { -- Ametrine
-		["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:36934:0:0:0:0:0:0"] = { -- Eye of Zul
-		["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
+	-- ["item:36919:0:0:0:0:0:0"] = { -- Cardinal Ruby
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:36922:0:0:0:0:0:0"] = { -- King's Amber
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:36925:0:0:0:0:0:0"] = { -- Majestic Zircon
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:36928:0:0:0:0:0:0"] = { -- Dreadstone
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:36931:0:0:0:0:0:0"] = { -- Ametrine
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:36934:0:0:0:0:0:0"] = { -- Eye of Zul
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
 	-- common pigments (inks)
-	["item:39151:0:0:0:0:0:0"] = { -- Alabaster Pigment (Ivory / Moonglow Ink)
-		["item:765:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:2447:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:2449:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:39343:0:0:0:0:0:0"] = { -- Azure Pigment (Ink of the Sea)
-		["item:39969:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:36904:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:36907:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:36901:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:39970:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:37921:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:36905:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:36906:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:36903:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:61979:0:0:0:0:0:0"] = { -- Ashen Pigment (Blackfallow Ink)
-		["item:52983:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:52984:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:52985:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:52986:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:52987:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:52988:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:39334:0:0:0:0:0:0"] = { -- Dusky Pigment (Midnight Ink)
-		["item:785:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:2450:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:2452:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:2453:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:3820:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:39339:0:0:0:0:0:0"] = { -- Emerald Pigment (Jadefire Ink)
-		["item:3818:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:3821:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:3358:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:3819:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:39338:0:0:0:0:0:0"] = { -- Golden Pigment (Lion's Ink)
-		["item:3355:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:3369:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:3356:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:3357:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:39342:0:0:0:0:0:0"] = { -- Nether Pigment (Ethereal Ink)
-		["item:22786:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:22785:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:22789:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:22787:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:22790:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:22793:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:22791:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:22792:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:79251:0:0:0:0:0:0"] = { -- Shadow Pigment (Ink of Dreams)
-		["item:72237:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:72234:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:79010:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:72235:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:79011:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:89639:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-	},
-	["item:39341:0:0:0:0:0:0"] = { -- Silvery Pigment (Shimmering Ink)
-		["item:13464:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:13463:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:13465:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:13466:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:13467:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
-	["item:39340:0:0:0:0:0:0"] = { -- Violet Pigment (Celestial Ink)
-		["item:4625:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:8831:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:8838:0:0:0:0:0:0"] = {rate=.5, source="mill"},
-		["item:8839:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:8845:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-		["item:8846:0:0:0:0:0:0"] = {rate=.6, source="mill"},
-	},
+	-- ["item:39151:0:0:0:0:0:0"] = { -- Alabaster Pigment (Ivory / Moonglow Ink)
+	-- 	["item:765:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:2447:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:2449:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:39343:0:0:0:0:0:0"] = { -- Azure Pigment (Ink of the Sea)
+	-- 	["item:39969:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:36904:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:36907:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:36901:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:39970:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:37921:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:36905:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:36906:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:36903:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:61979:0:0:0:0:0:0"] = { -- Ashen Pigment (Blackfallow Ink)
+	-- 	["item:52983:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:52984:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:52985:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:52986:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:52987:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:52988:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:39334:0:0:0:0:0:0"] = { -- Dusky Pigment (Midnight Ink)
+	-- 	["item:785:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:2450:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:2452:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:2453:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:3820:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:39339:0:0:0:0:0:0"] = { -- Emerald Pigment (Jadefire Ink)
+	-- 	["item:3818:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:3821:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:3358:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:3819:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:39338:0:0:0:0:0:0"] = { -- Golden Pigment (Lion's Ink)
+	-- 	["item:3355:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:3369:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:3356:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:3357:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:39342:0:0:0:0:0:0"] = { -- Nether Pigment (Ethereal Ink)
+	-- 	["item:22786:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:22785:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:22789:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:22787:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:22790:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:22793:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:22791:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:22792:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:79251:0:0:0:0:0:0"] = { -- Shadow Pigment (Ink of Dreams)
+	-- 	["item:72237:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:72234:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:79010:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:72235:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:79011:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:89639:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- },
+	-- ["item:39341:0:0:0:0:0:0"] = { -- Silvery Pigment (Shimmering Ink)
+	-- 	["item:13464:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:13463:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:13465:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:13466:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:13467:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
+	-- ["item:39340:0:0:0:0:0:0"] = { -- Violet Pigment (Celestial Ink)
+	-- 	["item:4625:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:8831:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:8838:0:0:0:0:0:0"] = {rate=.5, source="mill"},
+	-- 	["item:8839:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:8845:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- 	["item:8846:0:0:0:0:0:0"] = {rate=.6, source="mill"},
+	-- },
 	
-	-- rare pigments (inks)
-	["item:43109:0:0:0:0:0:0"] = { -- Icy Pigment (Snowfall Ink)
-		["item:39969:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:36904:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:36907:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:36901:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:39970:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:37921:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:36905:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:36906:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:36903:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-	},
-	["item:61980:0:0:0:0:0:0"] = { -- Burning Embers (Inferno Ink)
-		["item:52983:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:52984:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:52985:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:52986:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:52987:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:52988:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-	},
-	["item:43104:0:0:0:0:0:0"] = { -- Burnt Pigment (Dawnstar Ink)
-		["item:3356:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:3357:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:3369:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:3355:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-	},
-	["item:43108:0:0:0:0:0:0"] = { -- Ebon Pigment (Darkflame Ink)
-		["item:22792:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:22790:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:22791:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:22793:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:22786:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:22785:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:22787:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:22789:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-	},
-	["item:43105:0:0:0:0:0:0"] = { -- Indigo Pigment (Royal Ink)
-		["item:3358:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:3819:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:3821:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:3818:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-	},
-	["item:79253:0:0:0:0:0:0"] = { -- Misty Pigment (Starlight Ink)
-		["item:72237:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:72234:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:79010:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:72235:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:79011:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:89639:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-	},
-	["item:43106:0:0:0:0:0:0"] = { -- Ruby Pigment (Fiery Ink)
-		["item:4625:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:8838:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:8831:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:8845:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:8846:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:8839:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-	},
-	["item:43107:0:0:0:0:0:0"] = { -- Sapphire Pigment (Ink of the Sky)
-		["item:13463:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:13464:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:13465:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:13466:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:13467:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-	},
-	["item:43103:0:0:0:0:0:0"] = { -- Verdant Pigment (Hunter's Ink)
-		["item:2453:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:3820:0:0:0:0:0:0"] = {rate=.1, source="mill"},
-		["item:2450:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:785:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-		["item:2452:0:0:0:0:0:0"] = {rate=.05, source="mill"},
-	},
+	-- -- rare pigments (inks)
+	-- ["item:43109:0:0:0:0:0:0"] = { -- Icy Pigment (Snowfall Ink)
+	-- 	["item:39969:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:36904:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:36907:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:36901:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:39970:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:37921:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:36905:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:36906:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:36903:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- },
+	-- ["item:61980:0:0:0:0:0:0"] = { -- Burning Embers (Inferno Ink)
+	-- 	["item:52983:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:52984:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:52985:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:52986:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:52987:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:52988:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- },
+	-- ["item:43104:0:0:0:0:0:0"] = { -- Burnt Pigment (Dawnstar Ink)
+	-- 	["item:3356:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:3357:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:3369:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:3355:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- },
+	-- ["item:43108:0:0:0:0:0:0"] = { -- Ebon Pigment (Darkflame Ink)
+	-- 	["item:22792:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:22790:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:22791:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:22793:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:22786:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:22785:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:22787:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:22789:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- },
+	-- ["item:43105:0:0:0:0:0:0"] = { -- Indigo Pigment (Royal Ink)
+	-- 	["item:3358:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:3819:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:3821:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:3818:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- },
+	-- ["item:79253:0:0:0:0:0:0"] = { -- Misty Pigment (Starlight Ink)
+	-- 	["item:72237:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:72234:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:79010:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:72235:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:79011:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:89639:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- },
+	-- ["item:43106:0:0:0:0:0:0"] = { -- Ruby Pigment (Fiery Ink)
+	-- 	["item:4625:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:8838:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:8831:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:8845:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:8846:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:8839:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- },
+	-- ["item:43107:0:0:0:0:0:0"] = { -- Sapphire Pigment (Ink of the Sky)
+	-- 	["item:13463:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:13464:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:13465:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:13466:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:13467:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- },
+	-- ["item:43103:0:0:0:0:0:0"] = { -- Verdant Pigment (Hunter's Ink)
+	-- 	["item:2453:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:3820:0:0:0:0:0:0"] = {rate=.1, source="mill"},
+	-- 	["item:2450:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:785:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- 	["item:2452:0:0:0:0:0:0"] = {rate=.05, source="mill"},
+	-- },
 
-	--Vanilla Gems
-	["item:774:0:0:0:0:0:0"] = { -- malachite
-		["item:2770:0:0:0:0:0:0"] = {rate=.5, source="prospect"},
-	},
-	["item:818:0:0:0:0:0:0"] = { -- Tigerseye
-		["item:2770:0:0:0:0:0:0"] = {rate=.5, source="prospect"},
-	},
-	["item:1210:0:0:0:0:0:0"] = { -- Shadowgem
-		["item:2771:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
-		["item:2770:0:0:0:0:0:0"] = {rate=.1, source="prospect"},
-	},
-	["item:1206:0:0:0:0:0:0"] = { -- Moss Agate
-		["item:2771:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
-	},
-	["item:1705:0:0:0:0:0:0"] = { -- Lesser moonstone
-		["item:2771:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
-		["item:2772:0:0:0:0:0:0"] = { rate=.3, source="prospect"},
-	},
-	["item:1529:0:0:0:0:0:0"] = { -- Jade
-		["item:2772:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
-		["item:2771:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:3864:0:0:0:0:0:0"] = { -- Citrine
-		["item:2772:0:0:0:0:0:0"] = {rate=.4, source="prospect"}, --	iron
-		["item:3858:0:0:0:0:0:0"] = {rate=.3, source="prospect"}, -- mith
-		["item:2771:0:0:0:0:0:0"] = {rate=.03, source="prospect"}, -- tin
-	},
-	["item:7909:0:0:0:0:0:0"] = { -- Aquamarine
-		["item:3858:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
-		["item:2772:0:0:0:0:0:0"] = {rate=.05, source="prospect"},
-		["item:2771:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:7910:0:0:0:0:0:0"] = { -- Star Ruby
-		["item:3858:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
-		["item:10620:0:0:0:0:0:0"] = {rate=.1, source="prospect"},
-		["item:2772:0:0:0:0:0:0"] = {rate=.05, source="prospect"},
-	},
-	["item:12361:0:0:0:0:0:0"] = { -- Blue Sapphire
-		["item:10620:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
-		["item:3858:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
-	},
-	["item:12799:0:0:0:0:0:0"] = { -- Large Opal
-		["item:10620:0:0:0:0:0:0"] = {rate =.3, source="prospect"}, -- thorium
-		["item:3858:0:0:0:0:0:0"] = {rate=.03, source="prospect"}, -- Mith
-	},
-	["item:12800:0:0:0:0:0:0"] = { -- Azerothian Diamond
-		["item:10620:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
-		["item:3858:0:0:0:0:0:0"] = {rate=.02, source="prospect"},
-	},
-	["item:12364:0:0:0:0:0:0"] = { -- Huge Emerald
-		["item:10620:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
-		["item:3858:0:0:0:0:0:0"] = {rate=.02, source="prospect"},
-	},
+	-- --Vanilla Gems
+	-- ["item:774:0:0:0:0:0:0"] = { -- malachite
+	-- 	["item:2770:0:0:0:0:0:0"] = {rate=.5, source="prospect"},
+	-- },
+	-- ["item:818:0:0:0:0:0:0"] = { -- Tigerseye
+	-- 	["item:2770:0:0:0:0:0:0"] = {rate=.5, source="prospect"},
+	-- },
+	-- ["item:1210:0:0:0:0:0:0"] = { -- Shadowgem
+	-- 	["item:2771:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
+	-- 	["item:2770:0:0:0:0:0:0"] = {rate=.1, source="prospect"},
+	-- },
+	-- ["item:1206:0:0:0:0:0:0"] = { -- Moss Agate
+	-- 	["item:2771:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
+	-- },
+	-- ["item:1705:0:0:0:0:0:0"] = { -- Lesser moonstone
+	-- 	["item:2771:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
+	-- 	["item:2772:0:0:0:0:0:0"] = { rate=.3, source="prospect"},
+	-- },
+	-- ["item:1529:0:0:0:0:0:0"] = { -- Jade
+	-- 	["item:2772:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
+	-- 	["item:2771:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:3864:0:0:0:0:0:0"] = { -- Citrine
+	-- 	["item:2772:0:0:0:0:0:0"] = {rate=.4, source="prospect"}, --	iron
+	-- 	["item:3858:0:0:0:0:0:0"] = {rate=.3, source="prospect"}, -- mith
+	-- 	["item:2771:0:0:0:0:0:0"] = {rate=.03, source="prospect"}, -- tin
+	-- },
+	-- ["item:7909:0:0:0:0:0:0"] = { -- Aquamarine
+	-- 	["item:3858:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
+	-- 	["item:2772:0:0:0:0:0:0"] = {rate=.05, source="prospect"},
+	-- 	["item:2771:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:7910:0:0:0:0:0:0"] = { -- Star Ruby
+	-- 	["item:3858:0:0:0:0:0:0"] = {rate=.4, source="prospect"},
+	-- 	["item:10620:0:0:0:0:0:0"] = {rate=.1, source="prospect"},
+	-- 	["item:2772:0:0:0:0:0:0"] = {rate=.05, source="prospect"},
+	-- },
+	-- ["item:12361:0:0:0:0:0:0"] = { -- Blue Sapphire
+	-- 	["item:10620:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
+	-- 	["item:3858:0:0:0:0:0:0"] = {rate=.03, source="prospect"},
+	-- },
+	-- ["item:12799:0:0:0:0:0:0"] = { -- Large Opal
+	-- 	["item:10620:0:0:0:0:0:0"] = {rate =.3, source="prospect"}, -- thorium
+	-- 	["item:3858:0:0:0:0:0:0"] = {rate=.03, source="prospect"}, -- Mith
+	-- },
+	-- ["item:12800:0:0:0:0:0:0"] = { -- Azerothian Diamond
+	-- 	["item:10620:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
+	-- 	["item:3858:0:0:0:0:0:0"] = {rate=.02, source="prospect"},
+	-- },
+	-- ["item:12364:0:0:0:0:0:0"] = { -- Huge Emerald
+	-- 	["item:10620:0:0:0:0:0:0"] = {rate=.3, source="prospect"},
+	-- 	["item:3858:0:0:0:0:0:0"] = {rate=.02, source="prospect"},
+	-- },
 
-	-- uncommon gems
-	["item:23117:0:0:0:0:0:0"] = { -- Azure Moonstone
-		["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-	},
-	["item:23077:0:0:0:0:0:0"] = { -- Blood Garnet
-		["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-	},
-	["item:23079:0:0:0:0:0:0"] = { -- Deep Peridot
-		["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-	},
-	["item:21929:0:0:0:0:0:0"] = { -- Flame Spessarite
-		["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-	},
-	["item:23112:0:0:0:0:0:0"] = { -- Golden Draenite
-		["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-	},
-	["item:23107:0:0:0:0:0:0"] = { -- Shadow Draenite
-		["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-	},
-	["item:36917:0:0:0:0:0:0"] = { -- Bloodstone
-		["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-	},
-	["item:36923:0:0:0:0:0:0"] = { -- Chalcedony
-		["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-	},
-	["item:36932:0:0:0:0:0:0"] = { -- Dark Jade
-		["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-	},
-	["item:36929:0:0:0:0:0:0"] = { -- Huge Citrine
-		["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-	},
-	["item:36926:0:0:0:0:0:0"] = { -- Shadow Crystal
-		["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-	},
-	["item:36920:0:0:0:0:0:0"] = { -- Sun Crystal
-		["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
-	},
+	-- -- uncommon gems
+	-- ["item:23117:0:0:0:0:0:0"] = { -- Azure Moonstone
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- },
+	-- ["item:23077:0:0:0:0:0:0"] = { -- Blood Garnet
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- },
+	-- ["item:23079:0:0:0:0:0:0"] = { -- Deep Peridot
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- },
+	-- ["item:21929:0:0:0:0:0:0"] = { -- Flame Spessarite
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- },
+	-- ["item:23112:0:0:0:0:0:0"] = { -- Golden Draenite
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- },
+	-- ["item:23107:0:0:0:0:0:0"] = { -- Shadow Draenite
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- },
+	-- ["item:36917:0:0:0:0:0:0"] = { -- Bloodstone
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- },
+	-- ["item:36923:0:0:0:0:0:0"] = { -- Chalcedony
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- },
+	-- ["item:36932:0:0:0:0:0:0"] = { -- Dark Jade
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- },
+	-- ["item:36929:0:0:0:0:0:0"] = { -- Huge Citrine
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- },
+	-- ["item:36926:0:0:0:0:0:0"] = { -- Shadow Crystal
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- },
+	-- ["item:36920:0:0:0:0:0:0"] = { -- Sun Crystal
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
+	-- },
 	-- ["item:52182:0:0:0:0:0:0"] = { -- Jasper
 		-- ["item:53038:0:0:0:0:0:0"] = {rate=.25, source="prospect"},
 		-- ["item:52185:0:0:0:0:0:0"] = {rate=.2, source="prospect"},
@@ -358,60 +358,60 @@ local conversions = {
 	-- },
 
 	--Rare Gems
-	["item:23440:0:0:0:0:0:0"] = { -- Dawnstone
-		["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:23436:0:0:0:0:0:0"] = { -- Living Ruby
-		["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:23441:0:0:0:0:0:0"] = { -- Nightseye
-		["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:23439:0:0:0:0:0:0"] = { -- Noble Topaz
-		["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:23438:0:0:0:0:0:0"] = { -- Star of Elune
-		["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:23437:0:0:0:0:0:0"] = { -- Talasite
-		["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:36921:0:0:0:0:0:0"] = { -- Autumn's Glow
-		["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:36933:0:0:0:0:0:0"] = { -- Forest Emerald
-		["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:36930:0:0:0:0:0:0"] = { -- Monarch Topaz
-		["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:36918:0:0:0:0:0:0"] = { -- Scarlet Ruby
-		["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:36924:0:0:0:0:0:0"] = { -- Sky Sapphire
-		["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
-	["item:36927:0:0:0:0:0:0"] = { -- Twilight Opal
-		["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
-		["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-		["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
-	},
+	-- ["item:23440:0:0:0:0:0:0"] = { -- Dawnstone
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:23436:0:0:0:0:0:0"] = { -- Living Ruby
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:23441:0:0:0:0:0:0"] = { -- Nightseye
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:23439:0:0:0:0:0:0"] = { -- Noble Topaz
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:23438:0:0:0:0:0:0"] = { -- Star of Elune
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:23437:0:0:0:0:0:0"] = { -- Talasite
+	-- 	["item:23424:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:23425:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:36921:0:0:0:0:0:0"] = { -- Autumn's Glow
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:36933:0:0:0:0:0:0"] = { -- Forest Emerald
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:36930:0:0:0:0:0:0"] = { -- Monarch Topaz
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:36918:0:0:0:0:0:0"] = { -- Scarlet Ruby
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:36924:0:0:0:0:0:0"] = { -- Sky Sapphire
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
+	-- ["item:36927:0:0:0:0:0:0"] = { -- Twilight Opal
+	-- 	["item:36909:0:0:0:0:0:0"] = {rate=.01, source="prospect"},
+	-- 	["item:36912:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- 	["item:36910:0:0:0:0:0:0"] = {rate=.04, source="prospect"},
+	-- },
 	-- ["item:52192:0:0:0:0:0:0"] = { -- Dream Emerald
 		-- ["item:53038:0:0:0:0:0:0"] = {rate=.08, source="prospect"},
 		-- ["item:52185:0:0:0:0:0:0"] = {rate=.05, source="prospect"},
