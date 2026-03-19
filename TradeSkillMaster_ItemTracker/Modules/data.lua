@@ -105,9 +105,11 @@ function Data:EventHandler(event, fire)
 			currentOpenBankType = GetCurrentBankType()
 
 			-- Query all tabs of the gbank to ensure all tabs will be scanned.
+			-- Ascension WoW: Personal/Realm banks have numWithdrawals=-1, so skip that check for them
 			local initialTab = GetCurrentGuildBankTab()
+			local isAscensionBank = (currentOpenBankType == BANK_TYPE_PERSONAL or currentOpenBankType == BANK_TYPE_REALM)
 			for tab = 1, GetNumGuildBankTabs() do
-				if select(5, GetGuildBankTabInfo(tab)) > 0 or IsGuildLeader(UnitName("player")) then
+				if isAscensionBank or select(5, GetGuildBankTabInfo(tab)) > 0 or IsGuildLeader(UnitName("player")) then
 					QueryGuildBankTab(tab)
 				end
 			end
